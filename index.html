@@ -1,0 +1,79 @@
+<html>
+    <head>
+
+		<title>Fibonacci</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<script>
+
+			"use strict";
+
+			function fFibo () {
+
+
+
+					var vFibonacci;
+					var vAnzahl;
+					var vAusgabe
+					var v1=1;
+                    var v2 = 1;
+					var v3 = 0;
+					
+					
+					vAnzahl = document.getElementById("idAnzahlFib").value;
+
+				
+					vAusgabe = "";
+					vAusgabe = vAusgabe + "<table border =1>";
+					vAusgabe = vAusgabe + "<tr><th> Fib(n) </th></tr>";
+					vAusgabe = vAusgabe + "<tr><td>"+ v2 +"  </td></tr>";
+
+					while (v1 <= vAnzahl) {
+
+					vFibonacci = v3 + v2;
+					v3 = v2;
+					v2 = vFibonacci;
+					vAusgabe = vAusgabe + "<tr><td>" + vFibonacci + "</td></tr>";
+
+						v1++;
+
+					}
+
+					vAusgabe = vAusgabe + "</table>";
+
+
+					document.getElementById("idAusgabe").innerHTML = vAusgabe;
+
+
+					}
+
+
+
+
+
+		</script>
+
+	</head>
+
+
+
+	<body>
+
+		<h1>Fibonacci Zahlenfolge </h1>
+		<br>
+Anzahl: <input id="idAnzahlFib" type="text" value="10" maxlength="10" size="10">
+
+<button onclick="fFibo();">Fibonacci go </button>
+
+<br> <br>
+
+<div id="idAusgabe"></div>
+
+
+
+
+
+</body>
+
+</html>
